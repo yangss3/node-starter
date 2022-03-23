@@ -1,11 +1,21 @@
 {
   "name": "node-starter",
   "version": "0.0.0",
-  "description": "",
-  "exports": "./dist/index.js",
+  "description": "A node app starter",
+  "type": "module" ,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js" ,
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "esno src/index.ts",
-    "build": "tsup src/index.ts --format esm,cjs",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
     "test": "vitest --globals",
     "test:run": "vitest run",
     "release": "pnpm build && bumpp --tag --push --no-verify && pnpm publish",
@@ -25,9 +35,23 @@
     "vitest": "^0.7.8"
   },
   "lint-staged": {
-    "*.(js|ts|tsx)": "eslint --fix"
+    "*.(js|ts)": "eslint --fix"
   },
   "engines": {
     "node": ">=14.8.0"
-  }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "Nicholas Yang <yss_2016@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangss3/node-starter.git"
+  },
+  "homepage": "https://github.com/yangss3/node-starter#readme",
+  "license": "MIT"
 }
