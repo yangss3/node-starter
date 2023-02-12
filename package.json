@@ -22,17 +22,17 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@types/node": "^18.7.8",
-    "@yangss/eslint-config-ts": "^0.2.12",
+    "@types/node": "^18.13.0",
+    "@yangss/eslint-config-ts": "^0.2.14",
     "@yangss/lint-msg": "^0.0.2",
     "bumpp": "^8.2.1",
-    "eslint": "^8.22.0",
+    "eslint": "^8.34.0",
     "tsx": "^3.8.2",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "tsup": "^6.2.2",
-    "typescript": "^4.7.4",
-    "vitest": "^0.22.1"
+    "lint-staged": "^13.1.1",
+    "tsup": "^6.6.0",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.4"
   },
   "lint-staged": {
     "*.(js|ts)": "eslint --fix"
